@@ -4,3 +4,6 @@ export const myFunction = () => {
   // aqui tu codigo
   console.log('Hola mundo!');
 };
+
+
+//probando git push inniciando proyecto

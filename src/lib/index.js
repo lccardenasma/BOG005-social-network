@@ -6,4 +6,4 @@ export const myFunction = () => {
 };
 
 
-//probando git push inniciando proyecto
+//probando git push iniciando proyecto

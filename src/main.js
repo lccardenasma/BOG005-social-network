@@ -1,9 +1,10 @@
-import {welcome} from './Componentes/welcome.js';
+// eslint-disable-next-line import/no-unresolved
+import { welcome } from "./Componentes/welcome.js";
 
-const root = document.getElementById ('root');
+const root = document.getElementById("root");
 
 const routes = {
-'/': Welcome,
+  "/": welcome,
 };
 
-root.appendChild (welcome());
+root.appendChild(welcome());

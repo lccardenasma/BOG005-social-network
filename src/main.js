@@ -1,19 +1,19 @@
-import { welcome } from './Componentes/Welcome.js';
-import { login } from './Componentes/login.js';
+import { welcome } from "./Componentes/Welcome.js";
+import { login } from "./Componentes/login.js";
+import { register } from "./Componentes/Register.js";
+import { wall } from "./Componentes/Wall.js";
 
-const root = document.getElementById('root');
+const root = document.getElementById("root");
 
 const routes = {
-  '/': welcome,
-  '/login': login,
+  "/": welcome,
+  "/login": login,
+  "/register": register,
+  "/wall": wall,
 };
 
 export const onNavigate = (pathname) => {
-  window.history.pushState(
-    {},
-    pathname,
-    window.location.origin + pathname,
-  );
+  window.history.pushState({}, pathname, window.location.origin + pathname);
   root.removeChild(root.firstChild);
   root.appendChild(routes[pathname]());
 };

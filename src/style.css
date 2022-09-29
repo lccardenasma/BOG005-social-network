@@ -1,3 +1,6 @@
-div {
-    background: yellow;
-  }
+.botonDePrueba{
+    background-color: red;
+}
+#divLogin{
+    background-color: violet;
+}

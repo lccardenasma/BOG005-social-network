@@ -9,7 +9,7 @@ export const register = () => {
   const email = document.createElement("input");
   const password = document.createElement("input");
   const buttonContinue = document.createElement("button");
-
+  buttonContinue.classList.add("botonDePrueba");
   logo.textContent = "logo";
   parrafo.textContent = "Comparte tus publicaciones y postea en una comunidad de diversos gustos literarios";
   name.placeholder = "Nombre";

@@ -1,15 +1,15 @@
-import { welcome } from "./Componentes/Welcome.js";
-import { login } from "./Componentes/login.js";
-import { register } from "./Componentes/Register.js";
-import { wall } from "./Componentes/Wall.js";
+import { welcome } from './Componentes/Welcome.js';
+import { login } from './Componentes/login.js';
+import { register } from './Componentes/Register.js';
+import { wall } from './Componentes/Wall.js';
 
-const root = document.getElementById("root");
+const root = document.getElementById('root');
 
 const routes = {
-  "/": welcome,
-  "/login": login,
-  "/register": register,
-  "/wall": wall,
+  '/': welcome,
+  '/login': login,
+  '/register': register,
+  '/wall': wall,
 };
 
 export const onNavigate = (pathname) => {

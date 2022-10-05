@@ -7,8 +7,17 @@ export const login = () => {
   const buttonBack = document.createElement("button");
   const inputEmail = document.createElement("input");
   const inputPass = document.createElement("input");
-  document.body.style.background = "#F3F3F3";
-  buttonLogin.textContent = "Ingresar";
+
+  document.body.style.background = "#00008B";
+  title.classList.add("title");
+  buttonLogin.classList.add("buttonLogin");
+  buttonBack.classList.add("buttonBack");
+  inputEmail.classList.add("inputEmail");
+  inputPass.classList.add("inputPass");
+
+  inputEmail.textContent = "Correo Electrónico";
+  inputPass.textContent = "Contraseña";
+  buttonLogin.textContent = "CONTINUAR";
   buttonBack.textContent = "Atras";
 
   buttonLogin.addEventListener("click", () => {

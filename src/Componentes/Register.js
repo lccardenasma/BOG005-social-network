@@ -9,9 +9,18 @@ export const register = () => {
   const email = document.createElement("input");
   const password = document.createElement("input");
   const buttonContinue = document.createElement("button");
-  buttonContinue.classList.add("botonDePrueba");
+  document.body.style.background = "#00008B";
+  div.classList.add("divRegister");
+  buttonContinue.classList.add("botonContinuar");
+  logo.classList.add("logoRegister");
+  parrafo.classList.add("parrafo");
+  name.classList.add("name");
+  age.classList.add("age");
+  email.classList.add("email");
+  password.classList.add("password");
+
   logo.textContent = "logo";
-  parrafo.textContent = "Comparte tus publicaciones y postea en una comunidad de diversos gustos literarios";
+  parrafo.textContent = "Crear una cuenta";
   name.placeholder = "Nombre";
   age.placeholder = "Edad";
   email.placeholder = "Correo Electrónico";

@@ -1,6 +1,261 @@
-.botonDePrueba{
-    background-color: red;
+/*Welcome*/
+
+.frase{
+    position: absolute;
+    width: 360px;
+    height: 75px;
+    left: 34px;
+    top: 401px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    border: 1px solid #000000;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    }
+.buttonLoginW{
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 34px;
+    top: 532px;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    color: #E303B6;
+  
 }
-#divLogin{
-    background-color: violet;
+.buttonRegisterW{
+    box-sizing: border-box;
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 34px;
+    top: 607px;
+    background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+
+
+}
+.buttonGoogle{
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 34px;
+    top: 697px;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    color: #4E4E4E;
+    
+
+}
+
+/*Login*/
+
+.buttonLogin {
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 58px;
+    top: 413px;
+    background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.inputEmail {
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 58px;
+    top: 234px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    border: 1px solid #9104FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.inputPass {
+    box-sizing: border-box;
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 58px;
+    top: 305px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    border: 1px solid #9104FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+/*Register*/
+
+.divRegister{
+    position: relative;
+    display: block;
+    height: 100px;
+
+}
+.parrafo {
+    position: absolute;
+    width: 360px;
+    height: 75px;
+    left: 36px;
+    top: 105px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 40px;
+    align-items: center;
+    letter-spacing: -0.05em;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.name {
+    box-sizing: border-box;
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 35px;
+    top: 234px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    border: 1px solid #9104FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+.age{
+    box-sizing: border-box;
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 35px;
+    top: 324px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    border: 1px solid #9104FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+.email{
+    box-sizing: border-box;
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 35px;
+    top: 414px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    border: 1px solid #9104FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+.password{
+    box-sizing: border-box;
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 35px;
+    top: 504px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    border: 1px solid #9104FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+.botonContinuar{
+    box-sizing: border-box;
+    position: absolute;
+    width: 360px;
+    height: 52px;
+    left: 34px;
+    top: 594px;
+    background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
 }

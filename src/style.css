@@ -181,7 +181,8 @@
     align-items: center;
     color: #FFFFFF;
 }
-.age{
+
+.email{
     box-sizing: border-box;
     position: absolute;
     width: 360px;
@@ -201,7 +202,7 @@
     align-items: center;
     color: #FFFFFF;
 }
-.email{
+.password{
     box-sizing: border-box;
     position: absolute;
     width: 360px;
@@ -221,33 +222,13 @@
     align-items: center;
     color: #FFFFFF;
 }
-.password{
-    box-sizing: border-box;
-    position: absolute;
-    width: 360px;
-    height: 52px;
-    left: 35px;
-    top: 504px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-    border: 1px solid #9104FF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-    font-family: 'Spartan';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-}
 .botonContinuar{
     box-sizing: border-box;
     position: absolute;
     width: 360px;
     height: 52px;
     left: 34px;
-    top: 594px;
+    top: 504px;
     background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;

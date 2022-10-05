@@ -15,8 +15,8 @@ export const login = () => {
   inputEmail.classList.add("inputEmail");
   inputPass.classList.add("inputPass");
 
-  inputEmail.textContent = "Correo Electrónico";
-  inputPass.textContent = "Contraseña";
+  inputEmail.placeholder = "Correo Electrónico";
+  inputPass.placeholder = "Contraseña";
   buttonLogin.textContent = "CONTINUAR";
   buttonBack.textContent = "Atras";
 

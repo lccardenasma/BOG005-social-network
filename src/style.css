@@ -1,5 +1,7 @@
 /*Welcome*/
-
+.divWelcome {
+    background-image:url("./Componentes/ImageWelcome.png");
+}
 .frase{
     position: absolute;
     width: 360px;

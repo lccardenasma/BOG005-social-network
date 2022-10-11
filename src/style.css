@@ -164,26 +164,7 @@
     background-clip: text;
     text-fill-color: transparent;
 }
-.name {
-    box-sizing: border-box;
-    position: absolute;
-    width: 360px;
-    height: 52px;
-    left: 35px;
-    top: 234px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-    border: 1px solid #9104FF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-    font-family: 'Spartan';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-}
+
 
 .email{
     box-sizing: border-box;
@@ -225,7 +206,7 @@
     align-items: center;
     color: #FFFFFF;
 }
-.botonContinuar{
+.botonRegister{
     box-sizing: border-box;
     position: absolute;
     width: 360px;

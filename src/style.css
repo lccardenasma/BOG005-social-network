@@ -1,5 +1,5 @@
 /*Welcome*/
-.divWelcome {
+.containerWelcome {
     background-image:url("./Componentes/ImageWelcome.png");
 }
 .frase{

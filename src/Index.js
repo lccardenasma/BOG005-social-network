@@ -13,21 +13,31 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+//const app = initializeApp(firebaseConfig);
 
-console.log('configuración realizada: ', app);
+//console.log('configuración realizada: ', app);
+firebase.initializeApp(firebaseConfig);
+function continuar(){
+  const email=document.getElementById('email').value;
+  const password=document.getElementById('password').value;
+  alert('email='+email+ 'password='+password);
+
+//   firebase.auth().createUserWithEmailAndPassword(email, pass)
+//   .catch(function(error) {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       alert(errorMessage);
+//   });
 
 // const auth = getAuth(firebaseConfig);
 // const db = getFirestore(firebaseConfig);
 // const todosCol = collection(db, 'todos');
 // const snapshot = await getDocs(todosCol);
 
-//detectar estado de autenticación
+// detectar estado de autenticación
 // onAuthStateChanged(auth, user => {
 //     if(user ≠ null) {
 //         console.log('logged in!');
 //     } else {
 //         console.log('No user');
 //     }
-//     )
-// })

@@ -1,8 +1,7 @@
 // import { getAuth. onAuthStateChanged } from 'firebase/auth';
 // import { getFirestore, collection, getDocs, getDoc } from 'firebase/firestore';
-import { register } from "./Componentes/Register.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
-//import { getAuth } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,58 +15,39 @@ const firebaseConfig = {
 
 // Initialize Firebase
 
-
 const app = initializeApp(firebaseConfig);
 
 console.log("configuración realizada: ", app);
 
-function registrar() {
-  let dataEmail = email.value;
-  let dataPassword = password.value;
-  return alert("email=" + dataEmail + "password=" + dataPassword);
-}
+const auth = getAuth(app);
 
-/*const auth = getAuth(firebaseConfig);
-connectAuthEmulator(auth, "http://localhost:9099");
+//Formula para registrar usuario con Firebase
 
-const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });*/
-=======
-//const app = initializeApp(firebaseConfig);
+export const registrar = (email, password) => {
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      console.log("registro correcto");
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log("error: ", errorCode, errorMessage);
+    });
+};
 
-//console.log('configuración realizada: ', app);
-firebase.initializeApp(firebaseConfig);
-function continuar(){
-  const email=document.getElementById('email').value;
-  const password=document.getElementById('password').value;
-  alert('email='+email+ 'password='+password);
+//Formula para ingresar a la cuenta con Firebase
 
-//   firebase.auth().createUserWithEmailAndPassword(email, pass)
-//   .catch(function(error) {
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
-//       alert(errorMessage);
-//   });
-
-
-// const db = getFirestore(firebaseConfig);
-// const todosCol = collection(db, 'todos');
-// const snapshot = await getDocs(todosCol);
-
-// detectar estado de autenticación
-// onAuthStateChanged(auth, user => {
-//     if(user ≠ null) {
-//         console.log('logged in!');
-//     } else {
-//         console.log('No user');
-//     }
+export const ingresar = (email, password) => {
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      console.log("ingreso correcto");
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log("error:", errorCode, errorMessage);
+    });
+};

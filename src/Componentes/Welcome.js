@@ -2,15 +2,22 @@ import { onNavigate } from "../main.js";
 
 export function showWelcome() {
   const welcome = ` <section class="containerWelcome">
-  <div>
-  <figure><img class="logo" src="./Componentes/logo.png" alt="Logo"/></figure>
-  </div>
-  <h2><img url="logo.png"></h2>
-  <p class="frase">Una Comunidad para compartir contenido de libros y fragmentos de texto.</p>
-  <button class="buttonLoginW" id="buttonLoginWC" >INICIAR SESION</button>
-  <button class="buttonRegisterW" id="buttonRegisterWC">REGISTRARSE</button>
-  <p class="o">----------------------------- o --------------------------</p>
-  <button class="buttonGoogle>Inicio sesión con Google</button>
+  <section class = "encabezado">
+    <figure><img src="./Componentes/logo.png" alt="Logo"/></figure>
+    <p class="frase">Una Comunidad para compartir contenido de libros y fragmentos de texto.</p>
+   </section>
+
+  <section class = "botonesWelcome">
+    <button class="buttonLoginW" id="buttonLoginWC" >INICIAR SESION</button>
+    <br>
+    <button class="buttonRegisterW" id="buttonRegisterWC">REGISTRARSE</button>
+    <br>
+    <p class="o"><span> o </span></p>
+    <br>
+    <button class="buttonGoogle">Inicio sesión con Google</button>
+
+  </section>
+  
   </section>
   `;
   const nodeWelcome = document.createElement("div");

@@ -1,23 +1,54 @@
 /*Welcome*/
-.containerWelcome {
-    background-image:url("./Componentes/ImageWelcome.png");
+
+/* .containerWelcome {
+    background-image:url("./Componentes/ImageWelcome.png"); 
+    margin: 0;
+	padding: 0;
+}  */
+
+.containerWelcome{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url("./Componentes/ImageWelcome.png"); 
+	background-size: cover;
+	z-index: 0;
 }
+ .encabezado {
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 255px);
+    z-index: 2;
+    top: 150px;
+}
+
+
 .frase{
     position: absolute;
     width: 360px;
     height: 75px;
     left: 34px;
-    top: 401px;
     display: flex;
     align-items: center;
     color: #FFFFFF;
-    border: 1px solid #000000;
     font-family: 'Spartan';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 27px;
-    }
+    } 
+
+.botonesWelcome {
+    
+    position: absolute;
+    align-items: center;
+    margin-left: 37.5%;
+     
+}
 .buttonLoginW{
     position: absolute;
     width: 360px;
@@ -34,8 +65,8 @@
     line-height: 17px;
     text-align: center;
     color: #E303B6;
-  
 }
+
 .buttonRegisterW{
     box-sizing: border-box;
     position: absolute;
@@ -53,16 +84,32 @@
     line-height: 17px;
     text-align: center;
     color: #FFFFFF;
-
-
 }
-.buttonGoogle{
+
+.o {
+    position: absolute;
+    width: 360px;
+    height: 75px;
+    left: 34px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 610px;
+}
+
+ /*boton inciar sesion con google */
+ .buttonGoogle {
     position: absolute;
     width: 360px;
     height: 52px;
     left: 34px;
-    top: 697px;
-    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    top: 700px;
+    background: linear-gradient(0deg, #ffffff, #ffffff);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
     font-family: 'Spartan';
@@ -72,9 +119,7 @@
     line-height: 17px;
     text-align: center;
     color: #4E4E4E;
-    
-
-}
+}  
 
 /*Login*/
 

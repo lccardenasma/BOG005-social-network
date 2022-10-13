@@ -1,4 +1,5 @@
 import { onNavigate } from "../main.js";
+import { ingresoGoogle } from "../index.js";
 
 export function showWelcome() {
   const welcome = ` <section class="containerWelcome">
@@ -14,7 +15,7 @@ export function showWelcome() {
     <br>
     <p class="o"><span> o </span></p>
     <br>
-    <button class="buttonGoogle">Inicio sesión con Google</button>
+    <button class="buttonGoogle" id = "ingresoGoogle">Inicio sesión con Google</button>
 
   </section>
   
@@ -25,6 +26,7 @@ export function showWelcome() {
 
   const buttonLogin = nodeWelcome.querySelector("#buttonLoginWC");
   const buttonRegister = nodeWelcome.querySelector("#buttonRegisterWC");
+  const botonGoogle = nodeWelcome.querySelector("#ingresoGoogle");
 
   console.log(buttonLogin);
 
@@ -37,5 +39,11 @@ export function showWelcome() {
   buttonRegister.addEventListener("click", () => {
     onNavigate("/register");
   });
+
+  botonGoogle.addEventListener("click", () => {
+    ingresoGoogle();
+  });
+
+  console.log(botonGoogle);
   return nodeWelcome;
 }

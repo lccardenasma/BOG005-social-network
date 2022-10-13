@@ -19,15 +19,8 @@ export function showLogin() {
   buttonIngresar.addEventListener("click", () => {
     ingresar(inputEmail.value, inputPassword.value);
   });
-  return nodeLogin;
-}
-/*
-/  buttonLogin.addEventListener("click", () => {
-    // console.log(inputEmail.value);
+  buttonIngresar.addEventListener("click", () => {
     onNavigate("/wall");
   });
-  buttonBack.addEventListener("click", () => {
-    onNavigate("/");
-  });/
-};
-*/
+  return nodeLogin;
+}

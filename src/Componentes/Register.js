@@ -18,16 +18,8 @@ export function showRegister() {
   botonR.addEventListener("click", () => {
     registrar(inputEmail.value, inputPassword.value);
   });
-
+  botonR.addEventListener("click", () => {
+    onNavigate("/wall");
+  });
   return nodeRegister;
 }
-/*buttonContinue.addEventListener("click", () => {
-  onNavigate("/wall");
-});
-*/
-/*const buttonRegister = document.getElementsByClassName("registrarse");
-buttonRegister.addEventListener("click", () => {
-  onNavigate("/wall");
-});
-*/
-//Función con Firebase

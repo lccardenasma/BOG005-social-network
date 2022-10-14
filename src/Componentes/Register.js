@@ -1,5 +1,5 @@
 import { onNavigate } from "../main.js";
-import { registrar } from "../index.js";
+import { registrar } from "../lib/firebase.js";
 
 export function showRegister() {
   const register = `

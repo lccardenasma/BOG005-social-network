@@ -14,7 +14,7 @@
 	bottom: -40px;
 	width: auto;
 	height: auto;
-	background-image: url("./Componentes/ImageWelcome.png"); 
+	background-image: url("../images/ImageWelcome.png"); 
 	background-size: cover;
 	z-index: 0;
 }

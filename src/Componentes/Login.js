@@ -1,5 +1,5 @@
 import { onNavigate } from "../main.js";
-import { ingresar } from "../index.js";
+import { ingresar } from "../lib/firebase.js";
 
 export function showLogin() {
   const login = `

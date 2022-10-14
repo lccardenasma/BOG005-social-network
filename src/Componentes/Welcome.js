@@ -1,10 +1,10 @@
-import { onNavigate } from "../main.js";
-import { ingresoGoogle } from "../index.js";
+import { onNavigate } from '../main.js';
+import { ingresoGoogle } from '../lib/firebase.js';
 
 export function showWelcome() {
   const welcome = ` <section class="containerWelcome">
   <section class = "encabezado">
-    <figure><img src="./Componentes/logo.png" alt="Logo"/></figure>
+    <figure><img src="../images/logo.png" alt="Logo"/></figure>
     <p class="frase">Una Comunidad para compartir contenido de libros y fragmentos de texto.</p>
    </section>
 

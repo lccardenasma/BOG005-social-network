@@ -1,5 +1,5 @@
-import { onNavigate } from '../main.js';
-import { ingresoGoogle } from '../lib/firebase.js';
+import { onNavigate } from "../main.js";
+import { ingresoGoogle } from "../lib/firebase.js";
 
 export function showWelcome() {
   const welcome = ` <section class="containerWelcome">
@@ -28,10 +28,6 @@ export function showWelcome() {
   const buttonRegister = nodeWelcome.querySelector("#buttonRegisterWC");
   const botonGoogle = nodeWelcome.querySelector("#ingresoGoogle");
 
-  console.log(buttonLogin);
-
-  console.log(buttonRegister);
-
   buttonLogin.addEventListener("click", () => {
     onNavigate("/login");
   });
@@ -44,6 +40,5 @@ export function showWelcome() {
     ingresoGoogle();
   });
 
-  console.log(botonGoogle);
   return nodeWelcome;
 }

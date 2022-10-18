@@ -1,5 +1,3 @@
-// import { getAuth. onAuthStateChanged } from 'firebase/auth';
-// import { getFirestore, collection, getDocs, getDoc } from 'firebase/firestore';
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
 
@@ -62,8 +60,6 @@ export const ingresoGoogle = () => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       const user = result.user;
-      //console.log("ingreso Google correcto");//
-      // ...
     })
     .catch((error) => {
       const errorCode = error.code;

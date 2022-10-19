@@ -60,3 +60,5 @@ export function showWall() {
   botonCerrar.addEventListener("click", salir);
   return nodeWall;
 }
+
+//Commit de prueba

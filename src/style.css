@@ -321,6 +321,17 @@ input::placeholder { /* email */
     left: 0px;
     top: 0%;
     background: linear-gradient(180deg, #4B0036 0%, #4D0037 14.58%, #280C7A 71.35%, #120045 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+#headerWall{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
 }
 
 .inicio {
@@ -363,9 +374,9 @@ input::placeholder { /* email */
 textarea {
     box-sizing: border-box;
     position: absolute;
-    width: 428px;
-    height: 143px;
-    left: 34px;
+    width: 500px;
+    height: 100px;
+    left: 70px;
     top: 100px;
     
     background: #ffffff00;
@@ -395,4 +406,37 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     line-height: 17px;
     text-align: center;
     color: #FFFFFF;
+}
+
+#containerPosts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#textPost{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+#textoPost {
+
+    background: #DAD9FF;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    text-align: justify;
+    display: flex;
+    flex: auto;
+
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #410831;
+
 }

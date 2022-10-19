@@ -1,24 +1,22 @@
 import { saveTask, getTask, getAllTasks } from "../lib/firestore.js";
+import { salir } from "../lib/firebase.js";
 
 export function showWall() {
   const wall = `
   <section class="containerWall">
+  <header id="headerWall">
     <h1 class = "inicio"> Inicio </h1>
-    <figure id = "imagenPerfil"> </figure>
     <form id="taskform" class= "task-form">
     <textarea type="text" id="postText" class="textPost" placeholder="¿Que quieres compartir?"></textarea>
     <button class="botonPublicar"> Publicar </button>
     </form>
+    <button id="cerrar">Cerrar Sesión</button>
+    </header>
     <section id="containerPosts"></section>
   </section>
   `;
   const nodeWall = document.createElement("div");
   nodeWall.innerHTML = wall;
-  /* const creandoPost = nodeWall.querySelector(".textPost");
-  const botonPublicar = nodeWall.querySelector(".botonPublicar");
-  botonPublicar.addEventListener("click", () => {
-    publicando(creandoPost.value);
-  });*/
 
   const taskForm = nodeWall.querySelector(".task-form");
 
@@ -38,13 +36,17 @@ export function showWall() {
     let postHtml = "";
     result.forEach((doc) => {
       let datos = doc.data();
+      console.log(doc.id);
 
       postHtml += `
       <div id= "textPost">
-      <p id="texto">${datos.text}</p>
+      <figure id = "imagenPerfil"> </figure>
+      <p id="textoPost">${datos.text}</p>
+      <section id="buttons">
       <button id="favorito">Favorito</button>
       <button id="editar">Editar</button>
-      <button id="eliminar">Eliminar</button>
+      <button id="${doc.id}">Eliminar</button>
+      </section>
       </div>
       
       `;
@@ -54,26 +56,7 @@ export function showWall() {
   });
   getAllTasks(querySnapshot);
 
-  /*const showPosts = (datos) => {
-    let postHtml = "";
-
-    for (let i = 0; i < datos.length; i++) {
-      postHtml += `
-      <section id= "textPost">
-      <p id="texto">${datos.data}</p>
-      </section>
-      <button id="favorito"></button>
-      <button id="editar"></button>
-      <button id="eliminar"></button>
-      `;
-    }
-    const postContainer = nodeWall.querySelector("#containerPosts");
-    postContainer.innerHTML = postHtml;
-  };
-
-  showPosts(querySnapshot.docs);*/
-
-  // window.addEventListener("DOMContentLoaded", () => {});
-
+  const botonCerrar = nodeWall.querySelector("#cerrar");
+  botonCerrar.addEventListener("click", salir);
   return nodeWall;
 }

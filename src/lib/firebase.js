@@ -1,7 +1,5 @@
-// import { getAuth. onAuthStateChanged } from 'firebase/auth';
-// import { getFirestore, collection, getDocs, getDoc } from 'firebase/firestore';
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -19,7 +17,8 @@ const app = initializeApp(firebaseConfig);
 
 console.log("configuración realizada: ", app);
 
-const auth = getAuth(app);
+export const auth = getAuth(app);
+export { onAuthStateChanged };
 
 //Función para registrar usuario con Firebase
 
@@ -62,8 +61,6 @@ export const ingresoGoogle = () => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       const user = result.user;
-      //console.log("ingreso Google correcto");//
-      // ...
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -73,20 +70,8 @@ export const ingresoGoogle = () => {
       console.log("error Google:", errorCode, errorMessage, email, credential);
       // ...
     });
-  /*getRedirectResult(auth)
-    .then((result) => {
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
+};
 
-      const user = result.user;
-      //console.log("recibidos datos");//
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      const email = error.customData.email;
-      const credential = GoogleAuthProvider.credentialFromError(error);
-      // console.log("error datos recibidos:", errorCode, errorMessage, email, credential);//
-      // ...
-    });*/
+export const salir = () => {
+  return signOut(getAuth());
 };

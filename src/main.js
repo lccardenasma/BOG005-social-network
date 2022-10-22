@@ -1,16 +1,16 @@
-import { showWelcome } from "./Componentes/Welcome.js";
-import { showLogin } from "./Componentes/login.js";
-import { showRegister } from "./Componentes/Register.js";
-import { showWall } from "./Componentes/Wall.js";
-import { auth, onAuthStateChanged } from "./lib/firebase.js";
+import { showWelcome } from './Componentes/Welcome.js';
+import { showLogin } from './Componentes/login.js';
+import { showRegister } from './Componentes/Register.js';
+import { showWall } from './Componentes/Wall.js';
+import { auth, onAuthStateChanged } from './lib/firebase.js';
 
-const root = document.getElementById("root");
+const root = document.getElementById('root');
 
 const routes = {
-  "/": showWelcome,
-  "/login": showLogin,
-  "/register": showRegister,
-  "/wall": showWall,
+  '/': showWelcome,
+  '/login': showLogin,
+  '/register': showRegister,
+  '/wall': showWall,
 };
 
 export const onNavigate = (pathname) => {
@@ -35,8 +35,8 @@ root.appendChild(component());
 onAuthStateChanged(auth, (user) => {
   console.log(user);
   if (!user) {
-    onNavigate("/");
+    onNavigate('/');
   } else {
-    onNavigate("/wall");
+    onNavigate('/wall');
   }
 });

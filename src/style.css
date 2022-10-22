@@ -104,6 +104,7 @@
     font-weight: 500;
     font-size: 20px;
     margin-top: 665px;
+    top: 5px;
 }
 
 .o::before  {
@@ -148,6 +149,10 @@
 /* ------------------------- REGISTER ----- */
 
 .containerRegister{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -315,24 +320,49 @@ input::placeholder { /* email */
 /* ------------------------- WALL ----- */
 
 .containerWall {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0%;
-    background: linear-gradient(180deg, #4B0036 0%, #4D0037 14.58%, #280C7A 71.35%, #120045 100%);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, #4B0036 0%, #4D0037 14.58%, #280C7A 71.35%, #120045 100%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-#headerWall{
-    width: 100%;
-    height: 600px;
+#ubicacionBotonCerrar {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 0.5%;
 }
+
+#cerrar {
+  
+    width: 100px;
+    height: 25px;
+    background: linear-gradient(0deg, #ffffff, #ffffff);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 17px;
+    text-align: center;
+    color: #4E4E4E;
+   
+
+}
+
+/* #headerWall{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+} */
 
 .inicio {
     position: absolute;
@@ -353,35 +383,65 @@ input::placeholder { /* email */
     color: #FFFFFF;
 }
 
-#imagenPerfil {
-    height: 1%;
-    width: 1%;
-    object-fit: contain;
+#perfil {
+    position: absolute;
+    display: flex;
+    justify-content: left;
+   
+    justify-content: flex-start;
+    
 }
 
 #imagenPerfil {
-    position: absolute;
+    
     width: 40px;
     height: 40px;
     padding: 0%;
     margin: 0%;
-    left: 34px;
-    top: 80px;
+    left: 0px;
+    top: 0px;
     background-image: url("../imagesWall/imagenPerfil.png");
+    
 }
 
+/* textarea {
+    /* width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+   
+} */
 
 textarea {
-    box-sizing: border-box;
-    position: absolute;
-    width: 500px;
-    height: 100px;
-    left: 70px;
-    top: 100px;
-    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+     /* margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 34px;
+    margin-right: 150px;     */
+    width: flex;
+    /* min-width: 80%;
+    min-height: 5em; */
+   
+
+    font-family: 'spartan';
     background: #ffffff00;
+    margin: 10% 10% 10% 10%;
+    width:fit-content;
+    height: fit-content;
+    text-align: justify;
+    color: #ffffff;
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 30px;
+    
     
 }
+
 textarea::placeholder { /* ---Que quieres publicar? --- */
     margin-top: 20px;
     color: #ffffff;
@@ -394,8 +454,8 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     position: absolute;
     width: 87px;
     height: 32px;
-    left: 375px;
-    top: 250px;
+    left: 150px;
+    top: 150px;
     background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
@@ -409,29 +469,48 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
 }
 
 #containerPosts{
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-}
-#textPost{
-    display: flex;
     align-items: center;
     flex-direction: column;
+    flex: content;
+    display: inline-block;
+    width:fit-content;
+    height: fit-content;
+    padding: 5% 5% 5% 5%;
+    border-radius: 5px;
+   
+   
 
 }
-#textoPost {
+
+#textPost{
+    /* display: flex; */
+    align-items: center;
+    flex-direction: column;
+    flex: content;
+    display: inline-block;
+
+
+}
+
+#textPost {
 
     background: #DAD9FF;
+    width:fit-content;
+    height: fit-content;
+    padding: 5% 5% 5% 5%;
     border-radius: 5px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    /* margin-top: 5%;
+    margin-bottom: 1%;
     margin-left: 150px;
-    margin-right: 150px;
+    margin-right: 150px; */
+    margin: 10% 10% 10% 10%;
     text-align: justify;
     display: flex;
     flex: auto;
-
     font-family: 'Spectral';
     font-style: normal;
     font-weight: 400;
@@ -439,4 +518,67 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     line-height: 30px;
     color: #410831;
 
+}
+
+
+#buttons {
+  
+    /* margin-bottom: -15%; */
+   
+
+}
+
+#botonFavorito { 
+   
+    background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    width: 87px;
+    height: 32px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 150px;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    
+
+}
+
+#botonEditar { 
+   
+    background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    width: 87px;
+    height: 32px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 150px;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    
+
+}
+
+.botonEliminar { 
+   
+    background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: none;
+    width: 87px;
+    height: 32px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 150px;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
 }

@@ -2,8 +2,8 @@ import { getFirestore, addDoc, collection, getDocs, onSnapshot, doc, deleteDoc, 
 console.log("getDocs: ", getDocs);
 const db = getFirestore();
 
-export const saveTask = (text) => {
-  addDoc(collection(db, "tasks"), { text });
+export const saveTask = (text, likes) => {
+  addDoc(collection(db, "tasks"), { text, likes });
 };
 
 export const getTask = () => {
@@ -21,5 +21,13 @@ export const eliminarPost = (id) => {
 export const getPost = (id) => getDoc(doc(db, "tasks", id));
 
 export const updatePost = (id, newFields) => {
+  console.log("id necesario", id);
+  console.log("campo: ", newFields);
   updateDoc(doc(db, "tasks", id), newFields);
 };
+
+/**
+ * cons addLike = (id, uid) => {
+ * updateDoc(...
+ * }
+ */

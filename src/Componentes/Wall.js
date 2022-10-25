@@ -22,16 +22,23 @@ export function showWall() {
 
   let editStatus = false;
   let id = "";
+  let likes = [];
   const taskForm = nodeWall.querySelector(".task-form");
 
-  taskForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+  // taskForm.addEventListener("submit", (e) => {
+  //   e.preventDefault();
+  //   const inputText = taskForm.postText;
+  //   if (!editStatus) {
+  //     taskForm["bottonPublicar"].innerText = "**Actualizar**";
 
-    const inputText = taskForm.postText;
+  //     //llamar a fc editar
+  //   } else {
+  //     saveTask(inputText.value);
+  //     taskForm["bottonPublicar"].innerText = "**Publicar";
+  //   }
 
-    saveTask(inputText.value);
-    taskForm.reset();
-  });
+  //   taskForm.reset();
+  // });
 
   const querySnapshot = getTask();
 
@@ -69,25 +76,26 @@ export function showWall() {
     botonesEditar.forEach((boton) => {
       boton.addEventListener("click", async (e) => {
         const doc = await getPost(e.target.dataset.id);
-        console.log(doc);
         const docData = doc.data();
+        console.log("jekljwljrlewjrklwjlrjwl", docData);
         taskForm["postText"].value = docData.text;
         editStatus = true;
         id = doc.id;
-
+        console.log("ver el id: ", id);
         taskForm["bottonPublicar"].innerText = "Actualizar";
       });
     });
   });
 
-  taskForm.addEventListener("submit", async (e) => {
+  taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const textt = taskForm["postText"].value;
+    const text = taskForm["postText"].value;
+    console.log("ver el status: ", editStatus);
     if (!editStatus) {
-      await saveTask(textt);
+      saveTask(text, likes);
     } else {
-      await updatePost(id, { textt });
+      updatePost(id, { text });
       editStatus = false;
       id = "";
       taskForm["bottonPublicar"].innerText = "Publicar";

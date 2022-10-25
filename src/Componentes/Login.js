@@ -1,5 +1,5 @@
-import { onNavigate } from '../main.js';
-import { ingresar } from '../lib/firebase.js';
+import { onNavigate } from "../main.js";
+import { ingresar } from "../lib/firebase.js";
 
 export function showLogin() {
   const login = `
@@ -11,16 +11,13 @@ export function showLogin() {
   <button class='botonLogin'>Continuar</button>
 </section>
 `;
-  const nodeLogin = document.createElement('div');
+  const nodeLogin = document.createElement("div");
   nodeLogin.innerHTML = login;
-  const inputEmail = nodeLogin.querySelector('.email');
-  const inputPassword = nodeLogin.querySelector('.password');
-  const buttonIngresar = nodeLogin.querySelector('.botonLogin');
-  buttonIngresar.addEventListener('click', () => {
+  const inputEmail = nodeLogin.querySelector(".email");
+  const inputPassword = nodeLogin.querySelector(".password");
+  const buttonIngresar = nodeLogin.querySelector(".botonLogin");
+  buttonIngresar.addEventListener("click", () => {
     ingresar(inputEmail.value, inputPassword.value);
-  });
-  buttonIngresar.addEventListener('click', () => {
-    onNavigate('/wall');
   });
   return nodeLogin;
 }

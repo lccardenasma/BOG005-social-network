@@ -1,4 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+import { onNavigate } from "../main.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
@@ -20,6 +21,14 @@ console.log("configuración realizada: ", app);
 export const auth = getAuth(app);
 export { onAuthStateChanged };
 
+onAuthStateChanged(auth, (user) => {
+  console.log("USUARIO: ", user);
+  if (user == null) {
+    onNavigate("/");
+  } else {
+    onNavigate("/wall");
+  }
+});
 //Función para registrar usuario con Firebase
 
 export const registrar = (email, password) => {
@@ -43,6 +52,7 @@ export const ingresar = (email, password) => {
     .then((userCredential) => {
       const user = userCredential.user;
       console.log("ingreso correcto");
+      onNavigate("/wall");
     })
     .catch((error) => {
       const errorCode = error.code;

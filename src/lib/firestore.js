@@ -1,4 +1,4 @@
-import { getFirestore, addDoc, collection, getDocs, onSnapshot, doc, deleteDoc, getDoc } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore.js";
+import { getFirestore, addDoc, collection, getDocs, onSnapshot, doc, deleteDoc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-firestore.js";
 console.log("getDocs: ", getDocs);
 const db = getFirestore();
 
@@ -18,6 +18,8 @@ export const eliminarPost = (id) => {
   deleteDoc(doc(db, "tasks", id));
 };
 
-export const getPost = (id) => {
-  up(doc(db, "tasks", id));
+export const getPost = (id) => getDoc(doc(db, "tasks", id));
+
+export const updatePost = (id, newFields) => {
+  updateDoc(doc(db, "tasks", id), newFields);
 };

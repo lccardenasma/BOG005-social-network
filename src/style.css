@@ -128,12 +128,15 @@
 }
 
 .buttonGoogle {
+    background-image: url(./images/g.png);
+    background-repeat: no-repeat;
+    background-position: 10%;
     position: absolute;
     width: 360px;
     height: 52px;
     left: 34px;
     top: 700px;
-    background: linear-gradient(0deg, #ffffff, #ffffff);
+    background-color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50px;
     font-family: 'Spartan';
@@ -357,12 +360,7 @@ input::placeholder { /* email */
 
 }
 
-/* #headerWall{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-} */
+
 
 .inicio {
     position: absolute;
@@ -375,7 +373,7 @@ input::placeholder { /* email */
     font-weight: 800;
     font-size: 17px;
     line-height: 20px;
-    /* or 118% */
+  
 
     display: flex;
     align-items: center;
@@ -383,49 +381,25 @@ input::placeholder { /* email */
     color: #FFFFFF;
 }
 
-#perfil {
-    position: absolute;
-    display: flex;
-    justify-content: left;
-   
-    justify-content: flex-start;
-    
-}
 
 #imagenPerfil {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
     
-    width: 40px;
-    height: 40px;
-    padding: 0%;
-    margin: 0%;
-    left: 0px;
-    top: 0px;
-    background-image: url("../imagesWall/imagenPerfil.png");
-    
+    width: 32px;
+    height: 32px;
+    background-image: url(./Componentes/imagesWall/usuario.png);
+    background-color: transparent;
+    background-repeat: no-repeat;    
 }
 
-/* textarea {
-    /* width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; 
-   
-} */
-
 textarea {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-     /* margin-top: 40px;
-    margin-bottom: 10px;
-    margin-left: 34px;
-    margin-right: 150px;     */
     width: flex;
-    /* min-width: 80%;
-    min-height: 5em; */
    
-
     font-family: 'spartan';
     background: #ffffff00;
     margin: 10% 10% 10% 10%;
@@ -469,9 +443,6 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
 }
 
 #containerPosts{
-    width: auto;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
@@ -481,13 +452,23 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
     height: fit-content;
     padding: 5% 5% 5% 5%;
     border-radius: 5px;
-   
-   
+}
+
+#postCompleto{
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    flex: content;
+    display: inline-block;
+    width:fit-content;
+    height: fit-content;
+    padding: 0% 5% 5% 5%;
+    border-radius: 5px;
 
 }
 
 #textPost{
-    /* display: flex; */
+    
     align-items: center;
     flex-direction: column;
     flex: content;
@@ -496,18 +477,14 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
 
 }
 
-#textPost {
+#textoPost {
 
     background: #DAD9FF;
     width:fit-content;
     height: fit-content;
     padding: 5% 5% 5% 5%;
     border-radius: 5px;
-    /* margin-top: 5%;
-    margin-bottom: 1%;
-    margin-left: 150px;
-    margin-right: 150px; */
-    margin: 10% 10% 10% 10%;
+    margin: 1% 10% 1% 5%;
     text-align: justify;
     display: flex;
     flex: auto;
@@ -523,62 +500,38 @@ textarea::placeholder { /* ---Que quieres publicar? --- */
 
 #buttons {
   
-    /* margin-bottom: -15%; */
+    align-items: center;
+    flex-direction: column;
+    flex: content;
+    display: inline-block;
+    margin-left: 10%;
    
 
 }
 
-#botonFavorito { 
-   
-    background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
+.botonFavorito {    
+    background-image: url(./Componentes/imagesWall/favorito\ 1.png);
+    background-repeat: no-repeat;    
     border: none;
     width: 87px;
     height: 32px;
-    font-family: 'Spartan';
-    font-style: normal;
-    font-weight: 150px;
-    font-size: 12px;
-    line-height: 17px;
-    text-align: center;
-    color: #FFFFFF;
-    
-
+    background-color: transparent;   
 }
 
-#botonEditar { 
-   
-    background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
+.botonEditar { 
+    background-image: url(./Componentes/imagesWall/Editar.png);
+    background-repeat: no-repeat;    
     border: none;
     width: 87px;
     height: 32px;
-    font-family: 'Spartan';
-    font-style: normal;
-    font-weight: 150px;
-    font-size: 12px;
-    line-height: 17px;
-    text-align: center;
-    color: #FFFFFF;
-    
-
+    background-color: transparent
 }
 
 .botonEliminar { 
-   
-    background: linear-gradient(90deg, rgba(145, 4, 255, 0.93) 0%, rgba(255, 0, 184, 0.93) 55.63%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
+    background-image: url(./Componentes/imagesWall/eliminar\ 1.png);
+    background-repeat: no-repeat;    
     border: none;
     width: 87px;
     height: 32px;
-    font-family: 'Spartan';
-    font-style: normal;
-    font-weight: 150px;
-    font-size: 12px;
-    line-height: 17px;
-    text-align: center;
-    color: #FFFFFF;
+    background-color: transparent
 }

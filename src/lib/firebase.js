@@ -19,6 +19,7 @@ const app = initializeApp(firebaseConfig);
 console.log("configuración realizada: ", app);
 
 export const auth = getAuth(app);
+export const getCurrentUser = () => getAuth().currentUser;
 export { onAuthStateChanged };
 
 onAuthStateChanged(auth, (user) => {
@@ -26,7 +27,8 @@ onAuthStateChanged(auth, (user) => {
   if (user == null) {
     onNavigate("/");
   } else {
-    onNavigate("/wall");
+    console.log(user.uid);
+   onNavigate("/wall");
   }
 });
 //Función para registrar usuario con Firebase

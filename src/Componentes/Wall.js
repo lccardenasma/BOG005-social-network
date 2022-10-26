@@ -1,5 +1,7 @@
-import { saveTask, getTask, getAllTasks, eliminarPost, getPost, updatePost } from "../lib/firestore.js";
-import { salir } from "../lib/firebase.js";
+import {
+  saveTask, getTask, getAllTasks, eliminarPost, getPost, updatePost, updateLike, disLike,
+} from '../lib/firestore.js';
+import { salir, getCurrentUser } from '../lib/firebase.js';
 
 export function showWall() {
   const wall = `
@@ -17,13 +19,13 @@ export function showWall() {
     <section id="containerPosts"></section>
   </section>
   `;
-  const nodeWall = document.createElement("div");
+  const nodeWall = document.createElement('div');
   nodeWall.innerHTML = wall;
 
   let editStatus = false;
-  let id = "";
-  let likes = [];
-  const taskForm = nodeWall.querySelector(".task-form");
+  let id = '';
+  const likes = [];
+  const taskForm = nodeWall.querySelector('.task-form');
 
   // taskForm.addEventListener("submit", (e) => {
   //   e.preventDefault();
@@ -43,8 +45,8 @@ export function showWall() {
   const querySnapshot = getTask();
 
   getAllTasks((result) => {
-    const postContainer = nodeWall.querySelector("#containerPosts");
-    let postHtml = "";
+    const postContainer = nodeWall.querySelector('#containerPosts');
+    let postHtml = '';
     result.forEach((doc) => {
       const datos = doc.data();
       postHtml += `
@@ -53,7 +55,7 @@ export function showWall() {
         <section id= "postCompleto">
           <p id="textoPost">${datos.text}</p>      
           <section id="buttons">
-            <button class="botonFavorito"></button>
+            <button class="botonFavorito" data-id="${doc.id}">${datos.likes.length}</button>
             <button class="botonEditar" data-id="${doc.id}"></button>
             <button class ="botonEliminar" data-id="${doc.id}"></button>
           </section>
@@ -61,44 +63,60 @@ export function showWall() {
       </div>
       
       `;
-      //console.log("ver posthtml: ", postHtml);
+      // console.log("ver posthtml: ", postHtml);
     });
     postContainer.innerHTML = postHtml;
 
-    const botonesEliminar = document.querySelectorAll(".botonEliminar");
+    const botonesEliminar = document.querySelectorAll('.botonEliminar');
     botonesEliminar.forEach((boton) => {
-      boton.addEventListener("click", ({ target: { dataset } }) => {
+      boton.addEventListener('click', ({ target: { dataset } }) => {
         eliminarPost(dataset.id);
       });
     });
 
-    const botonesEditar = document.querySelectorAll(".botonEditar");
+    const botonesEditar = document.querySelectorAll('.botonEditar');
     botonesEditar.forEach((boton) => {
-      boton.addEventListener("click", async (e) => {
+      boton.addEventListener('click', async (e) => {
         const doc = await getPost(e.target.dataset.id);
         const docData = doc.data();
-        console.log("jekljwljrlewjrklwjlrjwl", docData);
-        taskForm["postText"].value = docData.text;
+        // console.log('jekljwljrlewjrklwjlrjwl', docData);
+        taskForm.postText.value = docData.text;
         editStatus = true;
         id = doc.id;
-        console.log("ver el id: ", id);
-        taskForm["bottonPublicar"].innerText = "Actualizar";
+        console.log('ver el id: ', id);
+        taskForm.bottonPublicar.innerText = 'Actualizar';
+      });
+    });
+    const botonLike = document.querySelectorAll('.botonFavorito');
+    botonLike.forEach((boton) => {
+      boton.addEventListener('click', async (e) => {
+        const doc = await getPost(e.target.dataset.id);
+        // const docData = doc.data();
+        const userLike = doc.data().likes;
+        console.log(userLike);
+        const userId = getCurrentUser().uid;
+
+        if (userLike.includes(userId)) {
+          disLike(doc.id, userId);
+        } else {
+          updateLike(doc.id, userId);
+        }
       });
     });
   });
 
-  taskForm.addEventListener("submit", (e) => {
+  taskForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const text = taskForm["postText"].value;
-    console.log("ver el status: ", editStatus);
+    const text = taskForm.postText.value;
+    console.log('ver el status: ', editStatus);
     if (!editStatus) {
       saveTask(text, likes);
     } else {
       updatePost(id, { text });
       editStatus = false;
-      id = "";
-      taskForm["bottonPublicar"].innerText = "Publicar";
+      id = '';
+      taskForm.bottonPublicar.innerText = 'Publicar';
     }
 
     taskForm.reset();
@@ -106,8 +124,8 @@ export function showWall() {
 
   getAllTasks(querySnapshot);
 
-  const botonCerrar = nodeWall.querySelector("#cerrar");
-  botonCerrar.addEventListener("click", salir);
+  const botonCerrar = nodeWall.querySelector('#cerrar');
+  botonCerrar.addEventListener('click', salir);
 
   return nodeWall;
 }
